@@ -61,7 +61,7 @@ body
 	min-width: 60vw;
 	max-width: 600px; /*80vw !important;*/
 	transition: opacity 2s ease;
-	padding: 0em 1em 0em 1em;
+	padding: 2em 1em 0em 1em;
 }
 
 @media (hover:none), (hover:on-demand)
