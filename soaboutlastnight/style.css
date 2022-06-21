@@ -52,13 +52,16 @@ body
 
 #story
 {
-	position: relative;
+	display: block;
+	/*position: relative;
+	height: 100%;
+	*/
 	margin: 0 auto;
 	overflow: hidden;
-	height: 100%;
+	
 	width: 700px;
 	min-width: 60vw;
-	max-width: 80vw !important;
+	max-width: 600px; /*80vw !important;*/
 	transition: opacity 2s ease;
 	padding: 0em 1em 0em 1em;
 }
@@ -186,4 +189,9 @@ li {
 	position: fixed;
 	right: 12px;
 	top: 4px;
+}
+
+#controls a.hover
+{
+	color: blue;
 }
