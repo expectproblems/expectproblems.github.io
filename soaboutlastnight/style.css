@@ -1,6 +1,7 @@
 body
 {
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
 	font-weight: 300;
 	background: black;
 	color: white;
@@ -74,14 +75,6 @@ p
 	line-height: 1.4;
 }
 
-@media only screen and (min-width: 375px) 
-and (max-width: 812px){ 
-    /*
-    .test-class{display: none !important; visibility: hidden !important;}
-    */
-    p { font-size: 10pt; }
-}
-
 p, p > *
 {
 	-webkit-user-drag: none;
@@ -135,7 +128,6 @@ img
 
 .title
 {
-	font-weight: bold;
 	text-align: center;
 }
 .title p {
