@@ -1,10 +1,24 @@
+.theme-light {
+	--color-background: #ffffff;
+	--color-link: pink;
+	--color-linkhover: red;
+	--color-text: #000000;
+}
+  
+.theme-dark {
+	--color-background: #000000;
+	--color-link: pink;
+	--color-linkhover: red;
+	--color-text: #ffffff;
+}
+
 body
 {
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
 	font-weight: 300;
-	background: black;
-	color: white;
+	background: var(--color-background);
+	color: var(--color-text);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -91,31 +105,31 @@ a
 
 a:hover
 {
-	color: white;
+	color: var(--color-text);
 }
 
 .choice > a
 {
-	color: pink;
+	color: var(--color-link);
 	opacity: 0.5;
 	transition: all 1s;
 }
 
 .choice > a:hover
 {
-	color: red;
+	color: var(--color-linkhover);
 	opacity: 1;
 	transition: all 1s;	
 }
 
 .choice > a:active
 {
-	color:red;
+	color:var(--color-linkhover);
 }
 
 .chosen
 {
-	color: white !important;
+	color: var(--color-link) !important;
 	opacity: 1 !important;
 }
 
@@ -163,4 +177,13 @@ img
 
 li {
 	font-size: 11pt;
+}
+
+#controls {
+	z-index: 10;
+	display: block;
+	text-align: center;
+	position: fixed;
+	right: 12px;
+	top: 4px;
 }
