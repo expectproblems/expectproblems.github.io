@@ -210,7 +210,9 @@ li {
 }
 
 /* default to the 'dark' mode */
-
+img[src*="light"] { display: none }
+img[src*="dark"] { display: block }
+	
 @media (prefers-color-scheme: light) {
 	img[src*="light"] { display: block }
 	img[src*="dark"] { display: none }
