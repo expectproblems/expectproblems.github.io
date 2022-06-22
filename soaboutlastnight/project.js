@@ -56,7 +56,6 @@ for (var i = 0; i < 9; i++)
 choices.add(" ", 0, true, true);
 
 options.linedelay = 200.0;
-options.memorycard_format = "local";
 
 // -----------------------------------
 
