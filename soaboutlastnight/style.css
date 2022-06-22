@@ -1,54 +1,73 @@
-.theme-light {
-	--color-background: #ffffff;
-	--color-link: pink;
-	--color-linkhover: red;
-	--color-text: #000000;
-}
-  
-.theme-dark {
-	--color-background: #000000;
-	--color-link: pink;
-	--color-linkhover: red;
-	--color-text: #ffffff;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+
+body {
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    background: black;
+    overflow: hidden;
 }
 
-body
-{
-	/*font-family: 'Open Sans', sans-serif;*/
-	font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 300;
-	/*background: var(--color-background);
-	color: var(--color-text);*/
-	background: black;
-	color: white;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-	-webkit-user-drag: none;
-	-khtml-user-drag: none;
-	-moz-user-drag: none;
-	-o-user-drag: none;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-	background: black;
-	color: white;
-  }
+body.switched {
+    transition: color 0.6s, background-color 0.6s;
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-	background: white;
-	color: black;
-  }
+h1,
+h2 {
+    text-align: center;
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Seems necessary to make iframes work on itch.io on mobile iOS :-( */
-#container
-{
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+    color: white;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/*
+  Built-in class:
+    # author: Name
+*/
+.byline {
+    font-style: italic;
+}
+
+.written-in-ink {
+    z-index: 3;
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: white;
+    transition: color 0.6s, background 0.6s;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 14px;
+    top: 0;
+}
+
+/* 
+  Enables <iframe> support work on itch.io when using mobile iOS
+*/
+.outerContainer {
     position: absolute;
     display: block;
     margin: 0;
@@ -60,165 +79,185 @@ body
     width: 100%;
     top: 0;
     left: 0;
+    margin-top: 24px;
     background-size: cover;
     background-repeat: no-repeat;
-	z-index: 10;    
 }
 
-#story
-{
-	display: block;
-	position: relative;
-	height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
-	width: 700px;
-	min-width: 60vw;
-	max-width: 600px; /*80vw !important;*/
-	transition: opacity 2s ease;
-	padding: 2em 1em 0em 1em;
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
-@media (hover:none), (hover:on-demand)
-{
-	#story
-	{
-		max-width: 90%;
-	} 
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    background: black;
 }
 
-#story > *:first-child {
-	margin-top: 10vh !important;
+.switched .container {
+    transition: background-color 0.6s;
 }
 
-#story > *:last-child 
-{
-	margin-bottom: 15vh !important;
+p {
+    font-size: 13pt;
+    color: white;
+    line-height: 1.7em;
+    font-weight: lighter;
 }
 
-/* ================================================================= */
-
-p
-{
-	margin-block-start: 0px !important;
-	font-size: 14pt;
-	line-height: 1.4;
+a {
+    font-weight: 700;
+    color: pink;
+    font-family: sans-serif;
+    transition: color 0.6s;
+    text-decoration: none;
 }
 
-p, p > *
-{
-	-webkit-user-drag: none;
-	-khtml-user-drag: none;
-	-moz-user-drag: none;
-	-o-user-drag: none;
+a:hover {
+    color: red;
+    transition: color 0.1s;
 }
 
-a 
-{	
-	text-decoration: none !important;
-	transition: all 0.5s linear;
+strong {
+    color: white;
+    font-weight: bold;
 }
 
-a:hover
-{
-	color: var(--color-text);
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
-.choice > a
-{
-	color: var(--color-link);
-	opacity: 0.5;
-	transition: all 1s;
+.container .hide {
+    opacity: 0.0;
 }
 
-.choice > a:hover
-{
-	color: var(--color-linkhover);
-	opacity: 1;
-	transition: all 1s;	
+.container .invisible {
+    display: none;
 }
 
-.choice > a:active
-{
-	color:var(--color-linkhover);
+.container>* {
+    opacity: 1.0;
+    transition: opacity 1.0s;
 }
 
-.chosen
-{
-	color: var(--color-link) !important;
-	opacity: 1 !important;
+/*
+  Class applied to all choices
+  (Will always appear inside <p> element by default.)
+*/
+.choice {
+    text-align: center;
+    line-height: 1.7em;
 }
 
-img
-{
-	width: 60%;
-	margin: 10pt auto 20pt;
-	display: block;
+/* 
+  Class applied to first choice
+*/
+:not(.choice)+.choice {
+    padding-top: 1em;
 }
 
-.title
-{
-	text-align: center;
-}
-.title p {
-	font-size: 22pt;
-}
-
-.subtitle
-{
-	font-style: italic;
-	text-align: center;
-}
-.subtitle p
-{
-	font-size: 18pt;
+/*
+  Class applied to choice links
+*/
+.choice a {
+    font-size: 15pt;
 }
 
-.contentwarnings
-{
-	font-style: italic;
-}
-
-.menuchoice > a
-{
-	font-weight: bold;
-	font-size: 25pt;
-	text-decoration: underline;
-}
-
-.cwtitle
-{
-	font-style: italic;
-}
-
-li {
-	font-size: 11pt;
+/* 
+  Built-in class:
+    The End # CLASS: end
+*/
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #controls {
-	z-index: 20;
-	display: block;
-	text-align: center;
-	position: fixed;
-	right: 12px;
-	top: 4px;
+    z-index: 4;
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 14px;
+    top: 4px;
+    user-select: none;
+    background: black;
+    transition: color 0.6s, background 0.6s;
 }
 
-#controls a.hover
-{
-	color: blue;
+#controls [disabled] {
+    color: #ccc;
 }
 
-/* default to the 'dark' mode */
-img[src*="light"] { display: none }
-img[src*="dark"] { display: block }
-	
-@media (prefers-color-scheme: light) {
-	img[src*="light"] { display: block }
-	img[src*="dark"] { display: none }
+#controls>*:not(:last-child):after {
+    content: " | ";
 }
 
-@media (prefers-color-scheme: dark) {
-	img[src*="light"] { display: none }
-	img[src*="dark"] { display: block }
+@media screen and (max-width: 980px) {
+    #controls {
+        z-index: 2;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* 
+  Dark Theme (Added in Inky 0.10.0)
+    # theme: dark
+*/
+
+body.dark {
+    background: black;
+    color: white;
+}
+
+.dark h2 {
+    color: #666;
+}
+
+.dark .container {
+    background: black;
+}
+
+.dark .written-in-ink {
+    background: black;
+}
+
+.dark a {
+    color: #cc8f1a;
+    transition: color 0.6s;
+}
+
+.dark a:hover {
+    color: white;
+}
+
+.dark strong {
+    color: white;
+}
+
+.dark #controls [disabled] {
+    color: #444;
+}
+
+.dark .end {
+    color: white;
+}
+
+.dark #controls {
+    background: black;
 }

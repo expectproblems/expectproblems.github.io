@@ -1,26 +1,39 @@
 ﻿<!doctype html>
-<html lang="en" class="theme-dark">
+<html lang="en">
 <head>
     <meta charset="utf-8">
 
-    <title>"So, About Last Night..."</title>
+    <title>SoAboutLastNight</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-	
-    <script type="text/javascript" src="ink.js"></script>
-    <script type="text/javascript" src="calico.js"></script>
-	<script type="module" src="project.js"></script>
+
 </head>
 
 <body>
-    <div id="container">
-        <!--<div id="controls" class="buttons">
-          <a title="Switch theme" onclick="toggleTheme()">switch theme</a>
-        </div>-->
-        
-        <div id="story"></div>
+
+    <div class="outerContainer">
+
+        <div id="controls" class="buttons">
+          <a id="rewind" title="Restart story from beginning">restart</a>
+          <a id="save" title="Save progress">save</a>
+          <a id="reload" title="Reload from save point">load</a>
+          <!--<a id="theme-switch" title="Switch theme">theme</a>-->
+        </div>
+
+        <div id="story" class="container">
+            <div class="header">
+                <h1>"So, About Last Night..."</h1>
+                <h2 class="byline">a vampire hangover story by Elissa Black</h2>
+                <br>
+                <center><img src="cig-dark.jpg"></center>
+            </div>
+        </div>
     </div>
+
+    <script src="ink.js"></script>
+    <script src="SoAboutLastNight.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
