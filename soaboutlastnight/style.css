@@ -210,7 +210,7 @@ li {
 }
 
 /* default to the 'dark' mode */
-img[src*="light"] { display: none }
+
 
 @media (prefers-color-scheme: light) {
 	img[src*="dark"]] { display: none }
