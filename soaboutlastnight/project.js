@@ -28,6 +28,7 @@ function toggleTheme() {
 import "./patches/minwordsperline.js";
 
 import "./patches/autosave.js";
+import "./patches/preload.js";
 
 import "./patches/memorycard.js";
 
