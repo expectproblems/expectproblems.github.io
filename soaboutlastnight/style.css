@@ -1,4 +1,4 @@
-.theme-light {
+/*.theme-light {
 	--color-background: #ffffff;
 	--color-link: pink;
 	--color-linkhover: red;
@@ -10,15 +10,15 @@
 	--color-link: pink;
 	--color-linkhover: red;
 	--color-text: #ffffff;
-}
+}*/
 
 body
 {
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
 	font-weight: 300;
-	background: var(--color-background);
-	color: var(--color-text);
+	/*background: var(--color-background);
+	color: var(--color-text);*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -29,6 +29,19 @@ body
 	-khtml-user-drag: none;
 	-moz-user-drag: none;
 	-o-user-drag: none;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+	background: black;
+	color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+	background: white;
+	color: black;
+  }
 }
 
 /* Seems necessary to make iframes work on itch.io on mobile iOS :-( */
@@ -192,4 +205,22 @@ li {
 #controls a.hover
 {
 	color: blue;
+}
+
+@media (prefers-color-scheme: light) {
+	.darkimage {
+			visible: false;
+	}
+	.lightimage {
+			visible: true;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.darkimage {
+			visible: true;
+	}
+	.lightimage {
+			visible: false;
+	}
 }
