@@ -27,10 +27,10 @@ function toggleTheme() {
 // preserves a minimum number of words per line
 import "./patches/minwordsperline.js";
 
+import "./patches/storage.js";
+import "./patches/memorycard.js";
 import "./patches/autosave.js";
 import "./patches/preload.js";
-
-import "./patches/memorycard.js";
 
 // click and drag to scroll the page
 import "./patches/dragtoscroll.js";
