@@ -214,6 +214,7 @@ li {
 	.lightimage {
 			visible: true;
 	}
+	img[src*="dark"]] { display: none }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -223,4 +224,5 @@ li {
 	.lightimage {
 			visible: false;
 	}
+	img[src*="light"] { display: none }
 }
