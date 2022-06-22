@@ -27,7 +27,6 @@ function toggleTheme() {
 // preserves a minimum number of words per line
 import "./patches/minwordsperline.js";
 
-import "./patches/storage.js";
 import "./patches/memorycard.js";
 import "./patches/autosave.js";
 import "./patches/preload.js";
@@ -57,7 +56,7 @@ for (var i = 0; i < 9; i++)
 choices.add(" ", 0, true, true);
 
 options.linedelay = 200.0;
-options.storage_defaultformat = "local";
+options.memorycard_format = "local";
 
 // -----------------------------------
 
