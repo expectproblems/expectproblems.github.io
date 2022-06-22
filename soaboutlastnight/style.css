@@ -211,11 +211,12 @@ li {
 
 /* default to the 'dark' mode */
 
-
 @media (prefers-color-scheme: light) {
-	img[src*="dark"]] { display: none }
+	img[src*="light"] { display: block }
+	img[src*="dark"] { display: none }
 }
 
 @media (prefers-color-scheme: dark) {
 	img[src*="light"] { display: none }
+	img[src*="dark"] { display: block }
 }
