@@ -1,4 +1,4 @@
-/*.theme-light {
+.theme-light {
 	--color-background: #ffffff;
 	--color-link: pink;
 	--color-linkhover: red;
@@ -10,7 +10,7 @@
 	--color-link: pink;
 	--color-linkhover: red;
 	--color-text: #ffffff;
-}*/
+}
 
 body
 {
@@ -213,21 +213,9 @@ li {
 img[src*="light"] { display: none }
 
 @media (prefers-color-scheme: light) {
-	.darkimage {
-			visible: false;
-	}
-	.lightimage {
-			visible: true;
-	}
 	img[src*="dark"]] { display: none }
 }
 
 @media (prefers-color-scheme: dark) {
-	.darkimage {
-			visible: true;
-	}
-	.lightimage {
-			visible: false;
-	}
 	img[src*="light"] { display: none }
 }
